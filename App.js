@@ -1,22 +1,24 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.containerTitle}>
-        <Text style={styles.title1}>h1</Text>
+    <View>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <View style={styles.containerTitle}>
+          <Text style={styles.title1}>h1</Text>
 
-        <Text style={styles.title2}>h2</Text>
+          <Text style={styles.title2}>h2</Text>
 
-        <Text style={styles.title3}>h3</Text>
-      </View>
+          <Text style={styles.title3}>h3</Text>
+        </View>
+      </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  scrollView: {
     padding: 10,
     margin: 80,
     backgroundColor: "blue",
