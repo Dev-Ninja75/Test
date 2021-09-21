@@ -6,11 +6,11 @@ export default function App() {
     <View>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.containerTitle}>
-          <Text style={styles.title1}>h1</Text>
+          <Text style={[styles.title1, styles.text]}>h1</Text>
 
-          <Text style={styles.title2}>h2</Text>
+          <Text style={[styles.title2, styles.text]}>h2</Text>
 
-          <Text style={styles.title3}>h3</Text>
+          <Text style={[styles.title3, styles.text]}>h3</Text>
         </View>
       </ScrollView>
     </View>
@@ -20,7 +20,6 @@ export default function App() {
 const styles = StyleSheet.create({
   scrollView: {
     padding: 10,
-    margin: 80,
     backgroundColor: "blue",
     alignItems: "center",
     justifyContent: "center",
@@ -28,17 +27,24 @@ const styles = StyleSheet.create({
 
   containerTitle: {
     backgroundColor: "white",
+    margin: 80,
   },
 
   title1: {
     fontSize: "100px",
+    marginVertical: 80,
   },
 
   title2: {
     textAlign: "center",
+    marginVertical: 80,
   },
 
   title3: {
     fontWeight: "bold",
+  },
+
+  text: {
+    marginVertical: 80,
   },
 });
